@@ -28,7 +28,7 @@ class QuotesController < ApplicationController
         else
           render :edit
         end
-      end
+    end
     
       def destroy
         @quote.destroy
