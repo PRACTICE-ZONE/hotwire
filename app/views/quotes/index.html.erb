@@ -8,5 +8,7 @@
                 data: { turbo: true } %>
   </div>
 <% end %>
+<%= turbo_frame_tag "second_frame" do %>
   <%= render @quotes %>
+<% end %>
 </main>
