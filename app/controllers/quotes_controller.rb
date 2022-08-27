@@ -3,7 +3,7 @@ class QuotesController < ApplicationController
     # before_action -> { sleep 3 }
 
     def index
-        @quotes = Quote.all
+        @quotes = Quote.ordered
     end
 
     def new
