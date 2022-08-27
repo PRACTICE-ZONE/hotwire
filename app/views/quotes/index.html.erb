@@ -4,9 +4,8 @@
     <%= link_to "New quote",
                 new_quote_path,
                 class: "btn btn--primary",
-                data: { turbo_frame: "_top" } %>
+                data: { turbo_frame: dom_id(Quote.new) } %>
   </div>
-
+  <%= turbo_frame_tag Quote.new %>
   <%= render @quotes %>
-
 </main>
