@@ -9,6 +9,10 @@
 guard = Company.create!(name: "kk security")
 construction = Company.create!(name: "pn solution")
 
+# guard staff
 account = User.create!(email: "accountant@kk.com", password: "123456", company: guard)
-manager = User.create!(email: "manager@pn.com", password: "123456", company: guard)
+manager = User.create!(email: "manager@kk.com", password: "123456", company: guard)
+
+# construction staff
 operator = User.create!(email: "operator@pnsolution.com", password: "123456", company: construction)
+engineer = User.create!(email: "engineer@pnsolution.com", password: "123456", company: construction)
