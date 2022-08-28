@@ -12,14 +12,14 @@ class QuotesController < ApplicationController
 
     def create
         @quote = current_company.quotes.build(quote_params)
-    
-        if @quote.save
-          respond_to do |format|
-            format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
-            format.turbo_stream
+        respond_to do |format|
+          if @quote.save
+            format.html { redirect_to quotes_path, notice: "quote was successfully created." }
+            format.json { render :show, status: :created, location: @quote }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @quote.errors, status: :unprocessable_entity }
           end
-        else
-          render :new, status: :unprocessable_entity
         end
     end
     
@@ -30,7 +30,7 @@ class QuotesController < ApplicationController
         if @quote.update(quote_params)
           redirect_to quotes_path, notice: "Quote was successfully updated."
         else
-          render :edit, status: :unprocessable_entity
+          render :edit
         end
     end
     
