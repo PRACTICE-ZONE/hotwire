@@ -1,7 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+# one:
+#   name: MyString
 
-two:
-  name: MyString
+# two:
+#   name: MyString
+
+first:
+  company: kk security
+  name: First quote
+
+second:
+  company: kk security
+  name: Second quote
+
+third:
+  company: kk security
+  name: Third quote
