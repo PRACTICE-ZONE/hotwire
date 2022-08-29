@@ -10,6 +10,10 @@ class QuotesController < ApplicationController
         @quote = Quote.new
     end
 
+    def show
+      @line_item_dates = @quote.line_item_dates.ordered
+    end
+
     def create
         @quote = current_company.quotes.build(quote_params)
         if @quote.save
