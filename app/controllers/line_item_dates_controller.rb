@@ -17,8 +17,9 @@ class LineItemDatesController < ApplicationController
     end
 
     def edit
+      
     end
-    
+
     def update
       if @line_item_date.update(line_item_date_params)
         redirect_to quote_path(@quote), notice: "Date was successfully updated."
