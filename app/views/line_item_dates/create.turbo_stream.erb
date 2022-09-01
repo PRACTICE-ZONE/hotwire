@@ -2,7 +2,7 @@
 <%= turbo_stream.update LineItemDate.new, "" %>
 
 <%# Step 2: add the date at the right place %>
-<%# <% if prev_date = @line_item_date.prev_date %>
+<% if prev_date = @line_item_date.prev_date %>
   <%= turbo_stream.after prev_date do %>
     <%= render @line_item_date, quote: @quote %>
   <% end %>
@@ -12,4 +12,4 @@
   <% end %>
 <% end %>
 
-<%= render_turbo_stream_flash_messages %> %>
+<%= render_turbo_stream_flash_messages %>
