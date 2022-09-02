@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'line_items/new'
-  get 'line_items/edit'
-  get 'line_items/create'
-  get 'line_items/destroy'
   resources :posts
   get 'pages/home'
   devise_for :users
