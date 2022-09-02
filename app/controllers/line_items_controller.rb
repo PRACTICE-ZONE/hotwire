@@ -18,4 +18,18 @@ class LineItemsController < ApplicationController
 
   def destroy
   end
+  
+  private
+
+  def line_item_params
+    params.require(:line_item).permit(:name, :description, :quantity, :unit_price)
+  end
+
+  def set_quote
+    @quote = current_company.quotes.find(params[:quote_id])
+  end
+
+  def set_line_item_date
+    @line_item_date = @quote.line_item_dates.find(params[:line_item_date_id])
+  end
 end
