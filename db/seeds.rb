@@ -25,3 +25,11 @@ lineItem = LineItem.create!(line_item_date: date, name: "Meeting room",
 description: "A cosy meeting room for 10 people",
 quantity: 1,
 unit_price: 1000);
+lineItem1 = LineItem.create!(line_item_date: date1, name: "cooking",
+description: "A recipe of mangoes",
+quantity: 1,
+unit_price: 1000);
+lineItem2 = LineItem.create!(line_item_date: date, name: "workout",
+description: "all abs and triceps exercise",
+quantity: 1,
+unit_price: 1000);
