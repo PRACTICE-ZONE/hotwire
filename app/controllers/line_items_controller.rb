@@ -1,6 +1,8 @@
 class LineItemsController < ApplicationController
   before_action :set_quote
   before_action :set_line_item_date
+  before_action :set_line_item, only: [:edit, :update, :destroy]
+
   def new
     @line_item = @line_item_date.line_items.build
   end
@@ -33,5 +35,9 @@ class LineItemsController < ApplicationController
 
   def set_line_item_date
     @line_item_date = @quote.line_item_dates.find(params[:line_item_date_id])
+  end
+  
+  def set_line_item
+    @line_item = @line_item_date.line_items.find(params[:id])
   end
 end
