@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  before_action :set_quote
+  before_action :set_line_item_date
   def new
     @line_item = @line_item_date.line_items.build
   end
@@ -18,7 +20,7 @@ class LineItemsController < ApplicationController
 
   def destroy
   end
-  
+
   private
 
   def line_item_params
