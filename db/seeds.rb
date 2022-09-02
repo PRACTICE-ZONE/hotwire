@@ -20,3 +20,8 @@ engineer = User.create!(email: "engineer@pnsolution.com", password: "123456", co
 quote = Quote.create!(name: "first quote", company: guard)
 date = LineItemDate.create!(date: Date.current, quote:quote )
 date1 = LineItemDate.create!(date: Date.current + 1.week, quote:quote)
+
+lineItem = LineItem.create!(line_item_date: date, name: "Meeting room",
+description: "A cosy meeting room for 10 people",
+quantity: 1,
+unit_price: 1000);
