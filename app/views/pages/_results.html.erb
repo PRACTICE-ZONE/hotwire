@@ -1,6 +1,6 @@
 <%= turbo_frame_tag :results do %>
     <div class="list-group mt-3">
-        <% @posts.each do |post| %>
+        <% @articles.each do |post| %>
             <%= link_to post.title, welcome_path(post), class: "list-group-item list-group-item-action" %>
         <% end %>
     </div>
