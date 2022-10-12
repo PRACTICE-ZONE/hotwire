@@ -33,3 +33,14 @@ lineItem2 = LineItem.create!(line_item_date: date, name: "workout",
 description: "all abs and triceps exercise",
 quantity: 1,
 unit_price: 1000);
+
+
+100.times do 
+    Article.find_or_create_by(title: Faker::Quote.famous_last_words) do |article|
+        article.content = Faker::Lorem.paragraph(
+            sentence_count: 45,
+            supplemental: true,
+            random_sentences_to_add: 4
+            )
+    end
+end
